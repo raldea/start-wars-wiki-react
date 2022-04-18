@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('./images/star-wars-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #1C1C1C;
+  color: #1C1C1C;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main-container {
+  transition: margin-top .5s, width .5s;
+  display: flex;
+  align-items: center;
+  margin-top: 250px;
+  flex-direction: column;
+  padding-bottom: 100px;
+}
+
+.search-field {
+  height: 40px;
+  padding: 5px 10px;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.searchForm {
+  display: flex;
+}
+
+.search-field {
+  flex: 1;
+}
+
+.select-search {
+  border: 0;
+  background: url('./images/icons/icon-chevron-down.svg') no-repeat calc(100% - 12px) 14px;
+  background-color: #bba79a;
+  background-size: 17px;
+  color: #1C1C1C;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 5px 35px 5px 12px;
+  max-width: 125px;
+  width: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+}
+
+.button-search {
+  background: #dba90c;
+  color: #1C1C1C;
+  box-shadow: none;
+  border: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.button-search:disabled {
+  opacity: .6;
+  cursor: default;
+}
+
+.powered-by-wrapper {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.powered-by-wrapper img {
+  max-width: 50px;
+  width: 100%;
+  margin-right: 5px;
+}
+
+.powered-by-wrapper p {
+  margin: 0;
+  color: white;
+  font-size: 12px;
+}
+
+.powered-by-wrapper a {
+  font-weight: 600;
+  color: white;
+}
+
+.content-container {
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.content-information-container {
+  max-width: 1000px;
+  padding: 0 60px;
+  position: relative;
+  width: 100%;
+  color: white;
+  flex-wrap: wrap;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.list-container {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+}
+
+.loader {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 150px;
+}
+
+.first-interaction-triggered.main-container {
+  margin-top: 100px;
+}
+
+.content-information-container .list h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.content-information-container .list {
+  transition: opacity .5s, background-color .5s;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  text-align: center;
+  width: calc((100% - 40px) / 3);
+  padding: 15px;
+  background: #e6e2df;
+  border-radius: 10px;
+  color: #1C1C1C;
+  opacity: .8;
+  cursor: pointer;
+}
+
+.content-information-container .list:hover {
+  background-color: #dba90c;
+  opacity: 1;
+}
+
+.content-information-container.loading .list-container {
+  display: none;
+}
+
+.content-information-container .list:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.list-info {
+  margin-bottom: 3px;
+}
+
+.no-result-found {
+  text-align: center;
+  font-weight: 600;
+  font-size: 45px;
+}
+
+.no-result-found.loading {
+  display: none;
+}
+
+.search-view {
+  text-align: center;
+  max-width: 1000px;
+}
+
+.view-title {
+  color: white;
+  font-size: 50px;
+  margin: 0 0 50px;
+}
+
+.individual-info {
+  color: white;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
